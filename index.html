@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF‑8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header class="px-4 md:px-8 lg:px-16 py-4 bg-white shadow relative sticky top-0 z-50 lg:static">
+        <nav>
+            <div class="flex items-center justify-between mx-auto max-w-screen-xl">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                    <img src="images/AlysLogo.png" class="w-10" alt="">
+                    <span class="ml-2 text-xl font-semibold">Aly's Craft</span>
+                </a>
+                <!-- Desktop nav links -->
+                <div class="hidden lg:flex lg:space-x-4">
+                    <a href="#home" class=" py-2 px-3 hover:text-purple-600">Home</a>
+                    <a href="about.html" class="py-2 px-3 hover:text-purple-600">About</a>
+                    <a href="#featured" class="py-2 px-3 hover:text-purple-600">Featured</a>
+                    <a href="#contact" class="py-2 px-3 hover:text-purple-600">Contact</a>
+                </div>
+                <!-- Mobile: hamburger and cart -->
+                <div class="flex items-center lg:hidden space-x-4 relative">
+                    <!-- put contact me button here -->
+                    <!-- Hamburger menu button -->
+                    <button id="nav-toggle" class="p-2 text-gray-700">
+                        <svg id="icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <!-- Mobile dropdown menu -->
+                    <div id="nav-menu"
+                        class="absolute top-full right-0 mt-2 w-48 bg-white border rounded-md shadow-lg hidden z-50">
+                        <a href="#home" class="block px-4 py-2 hover:bg-purple-100">Home</a>
+                        <a href="about.html" class="block px-4 py-2 hover:bg-purple-100">About</a>
+                        <a href="#featured" class="block px-4 py-2 hover:bg-purple-100">Featured</a>
+                        <a href="#contact" class="block px-4 py-2 hover:bg-purple-100">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ## BANNER ## -->
+<section id="home">
+    <div class="relative py-12 bg-pink-50 overflow-hidden">
+        <!-- Background Image -->
+        <div
+            class="absolute inset-0 bg-[url('images/flat-lay-fabric-texture.jpg')] bg-cover bg-center opacity-20 z-0">
+        </div>
+
+        <!-- Colored Overlay -->
+        <div class="absolute inset-0 bg-pink-200/50 z-10"></div>
+
+        <!-- Foreground Content -->
+        <div class="relative z-20 max-w-screen-xl mx-auto px-4 sm:px-4 md:px-6 lg:px-16">
+            <div class="grid lg:gap-8 xl:gap-0 lg:grid-cols-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7">
+                    <h1
+                        class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
+                        Own Handmade Treasure Today!
+                    </h1>
+                    <p class="max-w-2xl mb-6 font-light text-gray-700 md:text-lg lg:text-xl">
+                        Discover the charm of handcrafted creations made with love, detail, and a personal touch. Every
+                        piece tells a story.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#"
+                            class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-purple-500 rounded-lg hover:bg-purple-800 focus:ring-4 focus:ring-purple-300">
+                            Inquire Now
+                            <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                            </svg>
+                            Watch Preview
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="lg:col-span-5 flex justify-center lg:justify-end mt-8 lg:mt-0">
+                    <img src="images/CROCHET001.png" alt="Colorful handmade crochet display"
+                        class="w-full max-w-md sm:max-w-lg lg:max-w-xl">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="min-h-screen px-4 md:px-10 lg:px-20 py-10 bg-pink-50">
+
+  <!-- Letter Style Wrapper -->
+  <div class="bg-white shadow-lg rounded-2xl overflow-hidden border border-pink-200">
+    
+    <!-- About Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-12 py-10 md:py-20 bg-pink-100">
+
+      <!-- Text Content -->
+      <div class="space-y-4">
+        <div class="text-center">
+  <h2 class="text-3xl md:text-4xl font-bold text-pink-800 mb-6 inline-block">
+    <span class="block">The Heart Behind</span>
+    <span
+      class="block italic text-pink-600 relative after:content-[''] after:block after:w-12 after:h-1 after:bg-pink-400 after:mx-auto after:mt-2 after:rounded-full">
+      Aly's Craft
+    </span>
+  </h2>
+</div>
+
+        <p class="text-gray-700 text-base leading-relaxed">
+          Aly's Craft is a handmade crochet shop that brings warmth, color, and creativity into everyday essentials.
+          Every piece is made with love and care.
+        </p>
+        <p class="text-gray-700 text-base leading-relaxed">
+          It all began at home in 2023 as a personal passion project. What started as a hobby quickly turned into a heartfelt small business.
+        </p>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Even now, while balancing a full-time job, crocheting continues to be a source of peace and motivation. Each creation is a reminder that joy can come from doing what you love — one stitch at a time.
+        </p>
+        <p class="mt-4 text-right italic text-pink-800 text-lg" style="font-family: 'Dancing Script', cursive;">– Aly</p>
+      </div>
+
+      <!-- Image -->
+      <div class="mt-8 md:mt-0 flex justify-center">
+        <img src="images/BC006.jpg" alt="Crochet sample"
+          class="rounded-xl w-3/4 md:w-2/3 transform rotate-[-3deg] transition-all duration-500
+                 hover:rotate-0 hover:scale-105 hover:shadow-[0_0_25px_#ec4899] hover:shadow-pink-500/80">
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="py-12 px-6 bg-white text-center">
+      <h2 class="text-3xl font-bold text-pink-800 mb-8">Services</h2>
+
+      <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Service 1 -->
+        <div class="flex flex-col items-center space-y-4 p-6 border rounded-lg shadow-sm hover:shadow-md transition">
+          <img src="images/affordable.png" width="80" height="80" alt="Affordable">
+          <h3 class="text-xl font-semibold text-gray-800">Affordable Products</h3>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="flex flex-col items-center space-y-4 p-6 border rounded-lg shadow-sm hover:shadow-md transition">
+          <img src="images/gift.png" width="80" height="80" alt="Gift">
+          <h3 class="text-xl font-semibold text-gray-800">Personalized Gift</h3>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="flex flex-col items-center space-y-4 p-6 border rounded-lg shadow-sm hover:shadow-md transition">
+          <img src="images/label.png" width="80" height="80" alt="Handmade">
+          <h3 class="text-xl font-semibold text-gray-800">Handmade Crafts</h3>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</section>
+
+    <!-- ####### Featured ####### -->
+    <section id="featured">
+        <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
+            <!-- Heading & Filters -->
+            <div class="px-4 md:px-8 lg:px-16 py-4 bg-white shadow">
+                <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-dark-300">Our Featured Pieces
+                    </h2>
+                    <p class="mb-5 font-light text-gray-500 sm:text-xl text-dark-300">When we say limited, we mean
+                        it—grab
+                        your unique handmade treasure before it's gone!</p>
+                </div>
+
+                <div class="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
+
+                    <div
+                        class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                        <!-- Image -->
+                        <a href="#">
+                            <img src="images/OC002.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                        </a>
+                        <!-- Content -->
+                        <div class="p-6">
+                            <!-- Rectangular Label aligned with title -->
+                            <div class="mb-2 px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 w-max">
+                                Outfit
+                            </div>
+                            <!-- Title -->
+                            <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                                Lilac Crochet Bralette & Skirt
+                            </a>
+                            <p class="mt-1 text-sm text-gray-600">Handmade lilac crochet set featuring a daisy-trimmed
+                                bralette perfect for summer or beachwear.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                        <!-- Image -->
+                        <a href="#">
+                            <img src="images/BC002.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                        </a>
+                        <!-- Content -->
+                        <div class="p-6">
+                            <!-- Rectangular Label aligned with title -->
+                            <div class="mb-2 px-2 py-1 text-xs font-semibold text-yellow-700 bg-yellow-100 w-max">
+                                Bags
+                            </div>
+                            <!-- Title -->
+                            <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                                Daisy Patch Tote
+                            </a>
+                            <p class="mt-1 text-sm text-gray-600">Purple crochet bag with daisy granny squares. Light,
+                                soft, and
+                                handmade with love.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                        <!-- Image -->
+                        <a href="#">
+                            <img src="images/BC003.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                        </a>
+                        <!-- Content -->
+                        <div class="p-6">
+                            <!-- Rectangular Label aligned with title -->
+                            <div class="mb-2 px-2 py-1 text-xs font-semibold text-yellow-700 bg-yellow-100 w-max">
+                                Bags
+                            </div>
+                            <!-- Title -->
+                            <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                                Rose Trim Tote
+                            </a>
+                            <p class="mt-1 text-sm text-gray-600">Neutral crochet bag with a red rose stitch border.
+                                Minimal,
+                                sturdy, and handmade.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                        <a href="#">
+                            <img src="images/BR001.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                        </a>
+                        <!-- Content -->
+                        <div class="p-6">
+                            <div class="mb-2 px-2 py-1 text-xs font-semibold text-blue-700 bg-blue-100 w-max">
+                                Accessories
+                            </div>
+                            <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                                Pink & White Beaded Flower Accessories
+                            </a>
+                            <p class="mt-1 text-sm text-gray-600">Delicate Accessories made with pink and white beads,
+                                featuring a charming white rose centerpiece—sweet and perfect for any age</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center mt-6">
+                    <a href="gallery.html?load=true">
+<button id="seeMoreText" class="bg-pink-500 text-white px-4 py-2 rounded flex items-center justify-center">See more</button>
+</a>
+                </div>
+            </div>
+
+    </section>
+    <!-- Testimonial -->
+    <section class="relative overflow-hidden bg-white">
+        <div class="grid grid-cols-1 md:grid-cols-2 h-auto md:h-[600px] my-8 md:my-0">
+
+            <!-- Left: Solid background with heading -->
+            <div class="bg-pink-100 flex items-center justify-center">
+                <div class="text-center px-8 my-8 md:my-0">
+                    <h2 class="text-sm uppercase tracking-wide text-pink-600 font-semibold">What our customers say</h2>
+                    <p class="mt-2 text-3xl md:text-4xl font-bold text-gray-800 max-w-md">
+                        Hear it directly from those who love working with us
+                    </p>
+                </div>
+            </div>
+            <!-- Right: Background image with testimonial -->
+            <div id="testimonialAuthor" class="relative overflow-hidden">
+                <!-- Background Image -->
+                <img src="" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-20 z-0">
+                <div class="absolute inset-0 bg-gradient-to-b from-pink-300/30 to-transparent z-0"></div>
+
+                <!-- Testimonial Content -->
+                <div
+                    class="relative z-10 h-full flex flex-col justify-center items-center text-right text-gray-900 px-10">
+                    <!-- Testimonial -->
+                    <blockquote class="mt-8 max-w-lg">
+                        <div class="relative inline-block text-left">
+                            <svg aria-hidden="true" width="100" height="100"
+                                class="absolute -top-3 -left-3 fill-pink-300 opacity-30 z-0">
+                                <path
+                                    d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z" />
+                            </svg>
+                            <p id="testimonialText"
+                                class="text-xl md:text-2xl font-medium italic leading-relaxed relative z-10 text-center">
+                            </p>
+                        </div>
+                    </blockquote>
+
+                    <!-- Author + Arrows -->
+                    <div class="flex flex-col items-center justify-center mt-10 space-y-8">
+                        <!-- Author -->
+                        <figcaption class="flex flex-col items-center space-y-1 z-20 relative">
+                            <img id="testimonialImage" class="w-12 h-12 rounded-full border-2 border-pink-300" src=""
+                                alt="Profile">
+                            <div class="font-bold text-gray-800"></div>
+                        </figcaption>
+
+                        <!-- Arrows -->
+                        <div class="flex justify-center items-center space-x-8 z-20 relative">
+                            <button id="prevBtn" class="p-3 rounded-full bg-white hover:bg-gray-100 shadow transition">
+                                <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+
+                            <button id="nextBtn" class="p-3 rounded-full bg-white hover:bg-gray-100 shadow transition">
+                                <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="relative overflow-hidden">
+        <div class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+            <div
+                class="bg-white rounded-xl shadow-lg flex flex-col md:flex-row max-w-4xl w-full overflow-hidden text-dark">
+
+                <!-- Left Side: Contact Form -->
+                <div class="md:w-2/3 p-8">
+                    <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+
+                    <form action="https://formspree.io/f/xnnzzylp"
+  method="POST" class="space-y-4" >
+                        <div>
+                            <label class="block text-sm font-medium">Name</label>
+                            <input type="text" name="name" placeholder="Your Name"
+                                class="mt-1 w-full border border-gray-600 rounded-md p-2 bg-white text-dark focus:ring-purple-500 focus:border-purple-500" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium">Email</label>
+                            <input type="email" name="email" placeholder="you@example.com"
+                                class="mt-1 w-full border border-gray-600 rounded-md p-2 bg-white text-dark  focus:ring-purple-500 focus:border-purple-500" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium">Message</label>
+                            <textarea rows="4" name="message" placeholder="Your message..."
+                                class="mt-1 w-full border border-gray-600 rounded-md p-2 bg-white text-dark  focus:ring-purple-500 focus:border-purple-500"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-200">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Side: Image with icons on top -->
+                <div class="md:w-1/3 relative bg-gray-900">
+                    <!-- Static social icons at top -->
+                    <div class="absolute top-0 w-full bg-black/70 flex justify-center gap-4 py-4 z-10">
+
+                        <!-- TikTok -->
+                        <div class="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg"
+                                alt="TikTok" class="w-5 h-5 filter invert" />
+                        </div>
+
+                        <!-- Facebook -->
+                        <div class="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+                                alt="Facebook" class="w-5 h-5 filter invert" />
+                        </div>
+
+                        <!-- Email -->
+                        <div class="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email"
+                                class="w-5 h-5 filter invert" />
+                        </div>
+                    </div>
+
+                    <!-- Image -->
+                    <img src="images/Hanging Decorator.jpg" alt="Crochet Image"
+                        class="object-cover w-full h-full rounded-tr-xl rounded-br-xl">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="bg-white rounded-lg shadow-sm text-primary-800 m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="images/AlysLogo.png" class="h-8" alt="Alys Craft Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-primary-800">Aly's
+                        Craft</span>
+                </a>
+                <ul
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="about.html" class="hover:underline me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#featured" class="hover:underline me-4 md:me-6">Featured</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="hover:underline me-4 md:me-6">Contact</a>
+                    </li>
+                </ul>
+            </div>
+           
+            
+  <div class="max-w-screen-xl mx-auto px-4 py-6 text-center">
+    <hr class="my-4 border-gray-200" />
+    <div>
+      <span class="text-sm text-gray-500">
+        © 2025 <a href="#home" class="hover:underline">AlysCraft™</a>. All Rights Reserved.
+      </span>
+    </div>
+  </div>
+
+        </div>
+    </footer>
+
+
+
+</body>
+<script src="js/script.js"></script>
+
+</html>

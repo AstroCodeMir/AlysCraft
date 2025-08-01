@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF‑8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+</head>
+
+<body>
+    <header class="px-4 md:px-8 lg:px-16 py-4 bg-white shadow relative sticky top-0 z-50 lg:static">
+        <nav>
+            <div class="flex items-center justify-between mx-auto max-w-screen-xl">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                    <img src="images/AlysLogo.png" class="w-10" alt="">
+                    <span class="ml-2 text-xl font-semibold">Aly's Craft</span>
+                </a>
+                <!-- Desktop nav links -->
+                <div class="hidden lg:flex lg:space-x-4">
+                    <a href="index.html" class="py-2 px-3 hover:text-purple-600">Home</a>
+                    <a href="about.html" class="py-2 px-3 hover:text-purple-600">About</a>
+                    <a href="#featured" class="py-2 px-3 hover:text-purple-600">Featured</a>
+                    <a href="index.html#contact" class="py-2 px-3 hover:text-purple-600">Contact</a>
+                </div>
+                <!-- Mobile: hamburger and cart -->
+                <div class="flex items-center lg:hidden space-x-4 relative">
+                    <!-- put contact me button here -->
+                    <!-- Hamburger menu button -->
+                    <button id="nav-toggle" class="p-2 text-gray-700">
+                        <svg id="icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <!-- Mobile dropdown menu -->
+                    <div id="nav-menu"
+                        class="absolute top-full right-0 mt-2 w-48 bg-white border rounded-md shadow-lg hidden z-50">
+                        <a href="index.html" class="block px-4 py-2 hover:bg-purple-100">Home</a>
+                        <a href="about.html" class="block px-4 py-2 hover:bg-purple-100">About</a>
+                        <a href="#featured" class="block px-4 py-2 hover:bg-purple-100">Featured</a>
+                        <a href="index.html#contact" class="block px-4 py-2 hover:bg-purple-100">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- GALLERY -->
+
+    <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
+        <!-- Heading & Filters -->
+        <div class="px-4 md:px-8 lg:px-16 py-4 bg-white shadow">
+            <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-dark-300">Gallery
+                </h2>
+            </div>
+            <!-- TABS -->
+            <ul
+                class="m-4 grid grid-cols-4 text-xs sm:text-sm font-medium text-center text-gray-700 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300">
+
+                <li>
+                    <a href="#" data-tab="all"
+                        class="block w-full px-2 py-3 sm:px-4 sm:py-4 whitespace-normal break-words hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+                        aria-current="page">All</a>
+                </li>
+                <li>
+                    <a href="#" data-tab="bags"
+                        class="block w-full px-2 py-3 sm:px-4 sm:py-4 whitespace-normal break-words hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Bags</a>
+                </li>
+                <li>
+                    <a href="#" data-tab="wearables"
+                        class="block w-full px-2 py-3 sm:px-4 sm:py-4 whitespace-normal break-words hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Wearables</a>
+                </li>
+                <li>
+                    <a href="#" data-tab="Accessories"
+                        class="block w-full px-2 py-3 sm:px-4 sm:py-4 whitespace-normal break-words hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Accessories</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- gallery.html -->
+        <div id="loadingArea" class="hidden flex justify-center py-10">
+            <svg class="w-10 h-10 text-pink-500 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+            </svg>
+        </div>
+
+        <!-- MODAL FORM MODAL FORM -->
+        <div id="inquireModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+            <div class="bg-white p-6 rounded w-full max-w-md relative">
+                <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-600">✖</button>
+                <form id="modalForm">
+                    <h2 class="text-xl font-bold mb-2">Inquiry</h2>
+
+                    <div class="mb-2">
+                        <label class="block text-sm font-medium">Product Title</label>
+                        <input type="text" name="title" id="formTitle" readonly
+                            class="w-full border px-3 py-2 rounded" />
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="block text-sm font-medium">Description</label>
+                        <input type="text" name="description" id="formDescription" readonly
+                            class="w-full border px-3 py-2 rounded" />
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="block text-sm font-medium">Your Email</label>
+                        <input type="email" name="email" required class="w-full border px-3 py-2 rounded" />
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="block text-sm font-medium">Message</label>
+                        <textarea name="message" rows="3" class="w-full border px-3 py-2 rounded"
+                            placeholder="Your message..."></textarea>
+                    </div>
+
+                    <div id="formAlert" class="hidden mt-2 text-sm"></div>
+
+                    <button type="submit" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+                        Send
+                    </button>
+                </form>
+            </div>
+        </div>
+        <!-- TAB: Bags -->
+        <div id="bags" class="tab-content hidden m-8 mb-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+
+            <!-- Bag cards here -->
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <a href="#">
+                    <img src="images/BC001.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-yellow-700 bg-yellow-100 w-max">
+                        Bags
+                    </div>
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Crochet Tulip Tote
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Handmade beige tote with purple tulip indexliqués and scalloped
+                        trim. Soft, sturdy, and perfect for daily use.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Crochet Tulip Tote"
+                    data-description="Handmade beige tote with purple tulip indexliqués and scalloped trim. Soft, sturdy, and perfect for daily use."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/BC002.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-yellow-700 bg-yellow-100 w-max">
+                        Bags
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Daisy Patch Tote
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Purple crochet bag with daisy granny squares. Light, soft, and
+                        handmade with love.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Daisy Patch Tote"
+                    data-description="Purple crochet bag with daisy granny squares. Light, soft, and
+                        handmade with love."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/BC003.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-yellow-700 bg-yellow-100 w-max">
+                        Bags
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Rose Trim Tote
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Neutral crochet bag with a red rose stitch border. Minimal,
+                        sturdy, and handmade.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Rose Trim Tote"
+                    data-description="Neutral crochet bag with a red rose stitch border. Minimal,
+                        sturdy, and handmade"
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/BC004.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-yellow-700 bg-yellow-100 w-max">
+                        Bags
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Crochet Flower Bag
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Handmade dark green crochet bag with green floral motifs and a
+                        button closure</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Crochet Flower Bag"
+                    data-description="Handmade black crochet bag with green floral motifs and a button closure"
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- TAB: wearables -->
+        <div id="wearables"
+            class="tab-content hidden m-8 mb-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <!-- wearables cards here -->
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <a href="#">
+                    <img src="images/OC001.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 w-max">
+                        Wearables
+                    </div>
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Blue & White Crochet Tube Top
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Strapless crochet top with a ruched blue bodice and flared
+                        white lace trim—light, airy, and perfect for summer days.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Blue & White Crochet Tube Top"
+                    data-description="Strapless crochet top with a ruched blue bodice and flared
+                        white lace trim—light, airy, and perfect for summer days."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/OC002.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 w-max">
+                        Wearables
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Lilac Crochet Bralette & Skirt
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Handmade lilac crochet set featuring a daisy-trimmed bralette
+                        perfect for summer or beachwear.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Lilac Crochet Bralette & Skirt"
+                    data-description="Handmade lilac crochet set featuring a daisy-trimmed bralette
+                        perfect for summer or beachwear."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/OC003.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 w-max">
+                        Wearables
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Emerald Green Crochet Swim Set
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Chic handmade bralette with ruffles and a matching drawstring
+                        skirt—perfect for beach vibes.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Emerald Green Crochet Swim Set"
+                    data-description="Chic handmade bralette with ruffles and a matching drawstring
+                        skirt—perfect for beach vibes."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/OC005.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 w-max">
+                        Wearables
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Brown Bear Crochet Hat
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Adorable bear-themed crochet hat with cute ears and a ruffled
+                        brim—perfect for playful looks!</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Brown Bear Crochet Hat"
+                    data-description="Adorable bear-themed crochet hat with cute ears and a ruffled
+                        brim—perfect for playful looks!"
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <a href="#">
+                    <img src="images/OC006.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 w-max">
+                        Wearables
+                    </div>
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Daisy Ruffle Crochet Hat
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Charming mustard crochet hat with white flower accents and a
+                        soft ruffled edge—fun and sunny style!</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Daisy Ruffle Crochet Hat"
+                    data-description="Charming mustard crochet hat with white flower accents and a
+                        soft ruffled edge—fun and sunny style!"
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/OC007.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 w-max">
+                        Wearables
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Polar Bear Crochet Bucket Hat
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">A cute and cozy white bucket hat crocheted to resemble a polar
+                        bear's face, complete with black eyes and a nose. Perfect for adding a fun touch to your outfit
+                        or as a unique gift.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Polar Bear Crochet Bucket Hat"
+                    data-description="A cute and cozy white bucket hat crocheted to resemble a polar
+                        bear's face, complete with black eyes and a nose. Perfect for adding a fun touch to your outfit
+                        or as a unique gift."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/OC008.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 w-max">
+                        Wearables
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Frog Crochet Hat
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">A cute, green crochet hat designed to look like a smiling
+                        frog, complete with quirky eyes and a ruffled brim, making it an adorable accessory for any
+                        young or playful spirit.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Frog Crochet Hat"
+                    data-description="A cute, green crochet hat designed to look like a smiling
+                        frog, complete with quirky eyes and a ruffled brim, making it an adorable accessory for any
+                        young or playful spirit."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/OC009.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 w-max">
+                        Wearables
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Colorful Crochet Headbands
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">A set of four vibrant, hand-crocheted headbands featuring a
+                        playful design with scalloped edges and bold colors like red, purple, blue, and pink, perfect
+                        for adding a fun touch to any outfit.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Colorful Crochet Headbands"
+                    data-description="A set of four vibrant, hand-crocheted headbands featuring a
+                        playful design with scalloped edges and bold colors like red, purple, blue, and pink, perfect
+                        for adding a fun touch to any outfit."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- TAB: Accessories -->
+        <div id="Accessories"
+            class="tab-content hidden m-8 mb-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <!-- Accessories cards here -->
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <a href="#">
+                    <img src="images/BR001.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-blue-700 bg-blue-100 w-max">
+                        Accessories
+                    </div>
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Pink & White Beaded Flower Accessories
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Delicate Accessories made with pink and white beads, featuring
+                        a charming white rose centerpiece—sweet and perfect for any age</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Pink & White Beaded Flower Accessories"
+                    data-description="Delicate Accessories made with pink and white beads, featuring
+                        a charming white rose centerpiece—sweet and perfect for any age"
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/BR002.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-blue-700 bg-blue-100 w-max">
+                        Accessories
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Flower Beaded Bracelet
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">A charming bracelet featuring pastel-colored flower-shaped
+                        beads in soft shades of green, blue, and peach, perfect for a delicate and playful accessory</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Flower Beaded Bracelet"
+                    data-description="A charming bracelet featuring pastel-colored flower-shaped
+                        beads in soft shades of green, blue, and peach, perfect for a delicate and playful accessory"
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/BR009.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-blue-700 bg-blue-100 w-max">
+                        Accessories
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Butterfly Bead Bracelet
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">A delicate bracelet featuring pink and pearl beads, accented
+                        with a charming butterfly charm, perfect for adding a touch of elegance to any outfit.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Butterfly Bead Bracelet"
+                    data-description="A delicate bracelet featuring pink and pearl beads, accented
+                        with a charming butterfly charm, perfect for adding a touch of elegance to any outfit"
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/BR010.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-blue-700 bg-blue-100 w-max">
+                        Accessories
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Pearl Beaded Bracelet
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">An elegant bracelet composed of lustrous white pearl beads,
+                        offering a timeless and sophisticated accessory for everyday or special occasions.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Pearl Beaded Bracelet"
+                    data-description="An elegant bracelet composed of lustrous white pearl beads,
+                        offering a timeless and sophisticated accessory for everyday or special occasions."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <a href="#">
+                    <img src="images/BR003.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-blue-700 bg-blue-100 w-max">
+                        Accessories
+                    </div>
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Butterfly Pearl Bracelet
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">A beautiful combination of white pearl beads with whimsical
+                        butterfly charms, creating a graceful and eye-catching piece ideal for any style.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Butterfly Pearl Bracelet"
+                    data-description="A beautiful combination of white pearl beads with whimsical
+                        butterfly charms, creating a graceful and eye-catching piece ideal for any style."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/BR006.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-blue-700 bg-blue-100 w-max">
+                        Accessories
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Blue Floral Pearl Bracelet
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Elegant accessory featuring vibrant blue flower charms
+                        intertwined with lustrous pearls, perfect for adding a splash of color to any outfit.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Blue Floral Pearl Bracelet"
+                    data-description="Elegant accessory featuring vibrant blue flower charms
+                        intertwined with lustrous pearls, perfect for adding a splash of color to any outfit."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/BR007.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-blue-700 bg-blue-100 w-max">
+                        Accessories
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Peach Blossom Pearl Bracelet
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Delicate bracelet adorned with soft peach flower beads and
+                        shimmering pearls, ideal for a subtle and charming look.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Peach Blossom Pearl Bracelet"
+                    data-description="Delicate bracelet adorned with soft peach flower beads and
+                        shimmering pearls, ideal for a subtle and charming look."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+            <div
+                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <!-- Image -->
+                <a href="#">
+                    <img src="images/BR008.jpg" alt="Craft display" class="w-full h-48 object-cover" />
+                </a>
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Rectangular Label aligned with title -->
+                    <div class="mb-2 px-2 py-1 text-xs font-semibold text-blue-700 bg-blue-100 w-max">
+                        Accessories
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                        Pink Blossom Pearl Bracelet
+                    </a>
+                    <p class="mt-1 text-sm text-gray-600">Sweet and feminine bracelet with pink flower accents and a
+                        prominent pearl centerpiece, perfect for a playful yet sophisticated style.</p>
+                </div>
+                <div class="mt-2 mb-4 flex justify-center">
+                    <button   
+                    onclick="openModal(this)"
+                    data-title="Pink Blossom Pearl Bracelet"
+                    data-description="Sweet and feminine bracelet with pink flower accents and a
+                        prominent pearl centerpiece, perfect for a playful yet sophisticated style."
+                    class="bg-purple-600 text-white px-4 py-2 rounded">
+                        Inquire
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white rounded-lg shadow-sm text-primary-800 m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="#home" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="images/AlysLogo.png" class="h-8" alt="Alys Craft Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-primary-800">Aly's
+                        Craft</span>
+                </a>
+                <ul
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="about.html" class="hover:underline me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#featured" class="hover:underline me-4 md:me-6">Featured</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="hover:underline me-4 md:me-6">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="max-w-screen-xl mx-auto px-4 py-6 text-center">
+                <hr class="my-4 border-gray-200" />
+                <div>
+                    <span class="text-sm text-gray-500">
+                        © 2025 <a href="#home" class="hover:underline">AlysCraft™</a>. All Rights
+                        Reserved.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

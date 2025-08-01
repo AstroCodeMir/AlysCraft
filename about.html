@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+</head>
+
+<body>
+  <header class="px-4 md:px-8 lg:px-16 py-4 bg-white shadow relative sticky top-0 z-50 lg:static">
+    <nav>
+      <div class="flex items-center justify-between mx-auto max-w-screen-xl">
+        <!-- Logo -->
+        <a href="#" class="flex items-center">
+          <img src="images/AlysLogo.png" class="w-10" alt="">
+          <span class="ml-2 text-xl font-semibold">Aly's Craft</span>
+        </a>
+        <!-- Desktop nav links -->
+        <div class="hidden lg:flex lg:space-x-4">
+          <a href="index.html" class="py-2 px-3 hover:text-purple-600">Home</a>
+          <a href="about.html" class="py-2 px-3 hover:text-purple-600">About</a>
+          <a href="gallery.html" class="py-2 px-3 hover:text-purple-600">Gallery</a>
+          <a href="#contact" class="py-2 px-3 hover:text-purple-600">Contact</a>
+        </div>
+        <!-- Mobile: hamburger and cart -->
+        <div class="flex items-center lg:hidden space-x-4 relative">
+          <!-- put contact me button here -->
+          <!-- Hamburger menu button -->
+          <button id="nav-toggle" class="p-2 text-gray-700">
+            <svg id="icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <!-- Mobile dropdown menu -->
+          <div id="nav-menu"
+            class="absolute top-full right-0 mt-2 w-48 bg-white border rounded-md shadow-lg hidden z-50">
+            <a href="index.html" class="block px-4 py-2 hover:bg-purple-100">Home</a>
+            <a href="about.html" class="block px-4 py-2 hover:bg-purple-100">About</a>
+            <a href="gallery.html" class="block px-4 py-2 hover:bg-purple-100">Gallery</a>
+            <a href="index.html#contact" class="block px-4 py-2 hover:bg-purple-100">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  
+<section class="min-h-screen px-4 md:px-10 lg:px-20 py-10 bg-pink-50">
+
+  <!-- Letter Style Wrindexer -->
+  <div class="bg-white shadow-lg rounded-2xl overflow-hidden border border-pink-200">
+    
+    <!-- About Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-12 py-10 md:py-20 bg-pink-100">
+
+      <!-- Text Content -->
+      <div class="space-y-4">
+        <div class="text-center">
+  <h2 class="text-3xl md:text-4xl font-bold text-pink-800 mb-6 inline-block">
+    <span class="block">The Heart Behind</span>
+    <span
+      class="block italic text-pink-600 relative after:content-[''] after:block after:w-12 after:h-1 after:bg-pink-400 after:mx-auto after:mt-2 after:rounded-full">
+      Aly's Craft
+    </span>
+  </h2>
+</div>
+
+        <p class="text-gray-700 text-base leading-relaxed">
+          Aly's Craft is a handmade crochet shop that brings warmth, color, and creativity into everyday essentials.
+          Every piece is made with love and care.
+        </p>
+        <p class="text-gray-700 text-base leading-relaxed">
+          It all began at home in 2023 as a personal passion project. What started as a hobby quickly turned into a heartfelt small business.
+        </p>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Even now, while balancing a full-time job, crocheting continues to be a source of peace and motivation. Each creation is a reminder that joy can come from doing what you love — one stitch at a time.
+        </p>
+        <p class="mt-4 text-right italic text-pink-800 text-lg" style="font-family: 'Dancing Script', cursive;">– Aly</p>
+      </div>
+
+      <!-- Image -->
+      <div class="mt-8 md:mt-0 flex justify-center">
+        <img src="images/BC006.jpg" alt="Crochet sample"
+          class="rounded-xl w-3/4 md:w-2/3 transform rotate-[-3deg] transition-all duration-500
+                 hover:rotate-0 hover:scale-105 hover:shadow-[0_0_25px_#ec4899] hover:shadow-pink-500/80">
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="py-12 px-6 bg-white text-center">
+      <h2 class="text-3xl font-bold text-pink-800 mb-8">Services</h2>
+
+      <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Service 1 -->
+        <div class="flex flex-col items-center space-y-4 p-6 border rounded-lg shadow-sm hover:shadow-md transition">
+          <img src="images/affordable.png" width="80" height="80" alt="Affordable">
+          <h3 class="text-xl font-semibold text-gray-800">Affordable Products</h3>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="flex flex-col items-center space-y-4 p-6 border rounded-lg shadow-sm hover:shadow-md transition">
+          <img src="images/gift.png" width="80" height="80" alt="Gift">
+          <h3 class="text-xl font-semibold text-gray-800">Personalized Gift</h3>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="flex flex-col items-center space-y-4 p-6 border rounded-lg shadow-sm hover:shadow-md transition">
+          <img src="images/label.png" width="80" height="80" alt="Handmade">
+          <h3 class="text-xl font-semibold text-gray-800">Handmade Crafts</h3>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</section>
+
+
+  <footer class="bg-white rounded-lg shadow-sm text-primary-800 m-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+          <img src="images/AlysLogo.png" class="h-8" alt="Alys Craft Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap text-primary-800">Aly's
+            Craft</span>
+        </a>
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          <li>
+            <a href="about.html" class="hover:underline me-4 md:me-6">About</a>
+          </li>
+          <li>
+            <a href="index.html#featured" class="hover:underline me-4 md:me-6">Featured</a>
+          </li>
+          <li>
+            <a href="index.html#contact" class="hover:underline me-4 md:me-6">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="max-w-screen-xl mx-auto px-4 py-6 text-center">
+        <hr class="my-4 border-gray-200" />
+        <div>
+          <span class="text-sm text-gray-500">
+            © 2025 <a href="https://flowbite.com/" class="hover:underline">AlysCraft™</a>. All Rights Reserved.
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
