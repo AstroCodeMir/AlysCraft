@@ -1,7 +1,6 @@
-🌸 Welcome to Aly's Craft — A handmade Craft Page
+💐 Aly's Craft — Handmade Creations Landing Page Website  
+A clean, responsive, and handcrafted landing page for **Aly's Craft** — a brand showcasing uniquely designed products with a personal touch. This project blends creative layout, modern responsiveness, and user-friendly functionality to offer a delightful browsing experience.
 ---
-
-with smooth UI, responsive layout, and working form functionality. Designed for simplicity, beauty, and user engagement.
 
 
 ---
