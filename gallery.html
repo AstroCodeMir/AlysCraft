@@ -60,31 +60,31 @@
 
     <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
         <!-- Heading & Filters -->
-        <div class="px-4 md:px-8 lg:px-16 py-4 bg-white shadow">
+        <div class="px-3 md:px-8 lg:px-16 py-4 bg-white shadow">
             <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-dark-300">Gallery
                 </h2>
             </div>
             <!-- TABS -->
             <ul
-                class="m-4 grid grid-cols-4 text-xs sm:text-sm font-medium text-center text-gray-700 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300">
+                class="m-4 grid grid-cols-4 text-[10px] sm:text-sm font-medium text-center text-gray-700 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300">
 
                 <li>
                     <a href="#" data-tab="all"
-                        class="block w-full px-2 py-3 sm:px-4 sm:py-4 whitespace-normal break-words hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+                        class="block w-full px-2 py-3 sm:px-4 sm:py-4 whitespace-normal leading-tight break-words hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
                         aria-current="page">All</a>
                 </li>
                 <li>
                     <a href="#" data-tab="bags"
-                        class="block w-full px-2 py-3 sm:px-4 sm:py-4 whitespace-normal break-words hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Bags</a>
+                        class="block w-full px-2 py-3 sm:px-4 sm:py-4 whitespace-normal leading-tight break-words hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Bags</a>
                 </li>
                 <li>
                     <a href="#" data-tab="wearables"
-                        class="block w-full px-2 py-3 sm:px-4 sm:py-4 whitespace-normal break-words hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Wearables</a>
+                        class="block w-full px-2 py-3 sm:px-4 sm:py-4 whitespace-normal leading-tight break-words hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Wearables</a>
                 </li>
                 <li>
                     <a href="#" data-tab="Accessories"
-                        class="block w-full px-2 py-3 sm:px-4 sm:py-4 whitespace-normal break-words hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Accessories</a>
+                        class="block w-full px-2 py-3 sm:px-4 sm:py-4 whitespace-normal leading-tight break-words hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Accessories</a>
                 </li>
             </ul>
         </div>
@@ -142,7 +142,7 @@
 
             <!-- Bag cards here -->
             <div
-                class="rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                class=" flex flex-col h-full rounded-lg border border-gray-300 bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
                 <a href="#">
                     <img src="images/BC001.jpg" alt="Craft display" class="w-full h-48 object-cover" />
                 </a>
@@ -154,14 +154,14 @@
                     <a href="#" class="block text-lg font-semibold leading-tight text-gray-900 hover:underline">
                         Crochet Tulip Tote
                     </a>
-                    <p class="mt-1 text-sm text-gray-600">Handmade beige tote with purple tulip indexliqués and scalloped
+                    <p class="mt-1 text-sm text-gray-600">Handmade beige tote with purple tulip appliqués and scalloped
                         trim. Soft, sturdy, and perfect for daily use.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Crochet Tulip Tote"
-                    data-description="Handmade beige tote with purple tulip indexliqués and scalloped trim. Soft, sturdy, and perfect for daily use."
+                    data-description="Handmade beige tote with purple tulip appliqués and scalloped trim. Soft, sturdy, and perfect for daily use."
                     class="bg-purple-600 text-white px-4 py-2 rounded">
                         Inquire
                     </button>
@@ -186,7 +186,7 @@
                     <p class="mt-1 text-sm text-gray-600">Purple crochet bag with daisy granny squares. Light, soft, and
                         handmade with love.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Daisy Patch Tote"
@@ -216,7 +216,7 @@
                     <p class="mt-1 text-sm text-gray-600">Neutral crochet bag with a red rose stitch border. Minimal,
                         sturdy, and handmade.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Rose Trim Tote"
@@ -246,7 +246,7 @@
                     <p class="mt-1 text-sm text-gray-600">Handmade dark green crochet bag with green floral motifs and a
                         button closure</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Crochet Flower Bag"
@@ -277,7 +277,7 @@
                     <p class="mt-1 text-sm text-gray-600">Strapless crochet top with a ruched blue bodice and flared
                         white lace trim—light, airy, and perfect for summer days.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Blue & White Crochet Tube Top"
@@ -307,7 +307,7 @@
                     <p class="mt-1 text-sm text-gray-600">Handmade lilac crochet set featuring a daisy-trimmed bralette
                         perfect for summer or beachwear.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Lilac Crochet Bralette & Skirt"
@@ -337,7 +337,7 @@
                     <p class="mt-1 text-sm text-gray-600">Chic handmade bralette with ruffles and a matching drawstring
                         skirt—perfect for beach vibes.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Emerald Green Crochet Swim Set"
@@ -367,7 +367,7 @@
                     <p class="mt-1 text-sm text-gray-600">Adorable bear-themed crochet hat with cute ears and a ruffled
                         brim—perfect for playful looks!</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Brown Bear Crochet Hat"
@@ -394,7 +394,7 @@
                     <p class="mt-1 text-sm text-gray-600">Charming mustard crochet hat with white flower accents and a
                         soft ruffled edge—fun and sunny style!</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Daisy Ruffle Crochet Hat"
@@ -425,7 +425,7 @@
                         bear's face, complete with black eyes and a nose. Perfect for adding a fun touch to your outfit
                         or as a unique gift.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Polar Bear Crochet Bucket Hat"
@@ -457,7 +457,7 @@
                         frog, complete with quirky eyes and a ruffled brim, making it an adorable accessory for any
                         young or playful spirit.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Frog Crochet Hat"
@@ -489,7 +489,7 @@
                         playful design with scalloped edges and bold colors like red, purple, blue, and pink, perfect
                         for adding a fun touch to any outfit.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Colorful Crochet Headbands"
@@ -522,7 +522,7 @@
                     <p class="mt-1 text-sm text-gray-600">Delicate Accessories made with pink and white beads, featuring
                         a charming white rose centerpiece—sweet and perfect for any age</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Pink & White Beaded Flower Accessories"
@@ -552,7 +552,7 @@
                     <p class="mt-1 text-sm text-gray-600">A charming bracelet featuring pastel-colored flower-shaped
                         beads in soft shades of green, blue, and peach, perfect for a delicate and playful accessory</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Flower Beaded Bracelet"
@@ -582,7 +582,7 @@
                     <p class="mt-1 text-sm text-gray-600">A delicate bracelet featuring pink and pearl beads, accented
                         with a charming butterfly charm, perfect for adding a touch of elegance to any outfit.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Butterfly Bead Bracelet"
@@ -612,7 +612,7 @@
                     <p class="mt-1 text-sm text-gray-600">An elegant bracelet composed of lustrous white pearl beads,
                         offering a timeless and sophisticated accessory for everyday or special occasions.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Pearl Beaded Bracelet"
@@ -639,7 +639,7 @@
                     <p class="mt-1 text-sm text-gray-600">A beautiful combination of white pearl beads with whimsical
                         butterfly charms, creating a graceful and eye-catching piece ideal for any style.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Butterfly Pearl Bracelet"
@@ -669,7 +669,7 @@
                     <p class="mt-1 text-sm text-gray-600">Elegant accessory featuring vibrant blue flower charms
                         intertwined with lustrous pearls, perfect for adding a splash of color to any outfit.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Blue Floral Pearl Bracelet"
@@ -699,7 +699,7 @@
                     <p class="mt-1 text-sm text-gray-600">Delicate bracelet adorned with soft peach flower beads and
                         shimmering pearls, ideal for a subtle and charming look.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Peach Blossom Pearl Bracelet"
@@ -729,7 +729,7 @@
                     <p class="mt-1 text-sm text-gray-600">Sweet and feminine bracelet with pink flower accents and a
                         prominent pearl centerpiece, perfect for a playful yet sophisticated style.</p>
                 </div>
-                <div class="mt-2 mb-4 flex justify-center">
+                <div class="mt-auto pt-4 pb-4 flex justify-center">
                     <button   
                     onclick="openModal(this)"
                     data-title="Pink Blossom Pearl Bracelet"
